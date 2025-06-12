@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatGPT Button Extension</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 400px; /* برای فضای کافی */
+    }
+    .button-container {
+      margin-bottom: 10px;
+    }
+    .custom-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .button-text {
+      flex-grow: 1;
+      margin-right: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .delete-btn {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 2px 5px;
+      cursor: pointer;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .footer {
+      margin-top: auto; /* باعث می‌شود همیشه پایین صفحه باشد */
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .footer img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
+</head>
+<body>
+    <h2>Add New Prompt Button</h2>
+  <div>
+    <input type="text" id="buttonName" placeholder="Button Name" />
+    <textarea id="buttonText" placeholder="Text to add before message"></textarea>
+    <button id="addButton">Add Button</button>
+  </div>
+  
+  <h2>Your Prompt Buttons</h2>
+  <div id="buttonList"></div>
+
+  <div class="footer">
+    <div>Developed by RaminNy</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
